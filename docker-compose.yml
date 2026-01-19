@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  node-api:
+    build: ./node-api
+    ports:
+      - "3000:3000"
+
+  mitmproxy:
+    build: ./reverse-proxy
+    ports:
+      - "8080:8080"
+    depends_on:
+      - node-api
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "443:443"
+    depends_on:
+      - mitmproxy
