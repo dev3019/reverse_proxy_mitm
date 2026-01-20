@@ -7,4 +7,5 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app/.
 
-CMD ["mitmdump", "-s", "/app/proxy.py", "--mode", "reverse:http://node-api:3000"]
+CMD ["mitmdump", "-s", "/app/proxy.py"]
+

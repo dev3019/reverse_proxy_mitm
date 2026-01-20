@@ -3,3 +3,4 @@ package-lock.json
 *.crt
 *.key
 venv
+.env

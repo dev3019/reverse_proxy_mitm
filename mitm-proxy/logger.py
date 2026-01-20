@@ -1,4 +1,4 @@
-def log_block(flow, reason: str, prompt: str):
+def log_block(flow, reason: str, prompt: str = None):
     print(
         "[BLOCK]",
         {
