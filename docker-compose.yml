@@ -1,8 +1,4 @@
 services:
-  node-api:
-    build: ./node-api
-    ports:
-      - "3000:3000"
 
   mitmproxy:
     build: ./mitm-proxy
